@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق حمد والشايقي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="app-container" id="activationPage">
+        <div class="card">
+            <h1 class="brand-title">حمد والشايقي</h1>
+            <p class="brand-subtitle">نظام التفعيل المؤقت وسيرفرات النينجا</p>
+            
+            <div class="input-group">
+                <label for="licenseInput">أدخل مفتاح الترخيص الخاص بك</label>
+                <input type="text" id="licenseInput" placeholder="NINJA-XXXX-XXXX" autocomplete="off">
+            </div>
+            
+            <button class="btn-activate" onclick="verifyKey()">تفعيل وتدشين التطبيق</button>
+            <div id="msg" class="result-msg"></div>
+        </div>
+    </div>
+
+    <!-- الواجهة الرئيسية للتطبيق (مخفية وتظهر بعد التفعيل) -->
+    <div class="app-container hidden" id="mainPage">
+        <div class="card main-card">
+            <h1 class="welcome-title">مرحباً بك يا حمد! 🎉</h1>
+            <p>تم الاتصال بسيرفرات النينجا بنجاح، والتطبيق الآن بكامل صلاحياته.</p>
+            <div class="status-badge">الحالة: نشط ومفعل</div>
+            <button class="btn-logout" onclick="lockApp()">تسجيل الخروج قسرياً</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
